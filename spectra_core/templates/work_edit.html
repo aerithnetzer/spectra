@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Work</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'create_work.css' %}">
+</head>
+<body>
+    {% include 'partials/hero.html' %}
+    <h2>Edit Work</h2>
+    {% if error %}
+    <p><strong>{{ error }}</strong></p>
+    {% endif %}
+    <div class="create-work-form">
+    <form method="POST" action="{% url 'create_work' %}">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- This line renders the form fields -->
+        <input type="submit" value="Update Work">
+    </form>
+</div>
+</body>
+</html>

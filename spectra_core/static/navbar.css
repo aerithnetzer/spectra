@@ -1,0 +1,28 @@
+nav {
+    width: 100%;
+}
+
+nav .navbar-left {
+    float: left;
+}
+
+nav .navbar-right {
+    float: right;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    display: inline-block;
+    margin-right: 10px; /* Optional: add some space between the list items */
+}

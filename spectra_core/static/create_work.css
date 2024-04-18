@@ -1,0 +1,18 @@
+body {
+    background-color: #f8f8f8;
+  }
+  
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: #4E2A84;
+  }
+  

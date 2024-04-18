@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index Page</title>
+</head>
+<body>
+    {% include 'partials/navbar.html' %}
+    <h1>Work Created Successfully</h1>
+    <a href="{% url 'index' %}">Back to Home</a>
+    <a href="{% url 'create_work' %}">Create Another Work</a>
+</body>
+</html>

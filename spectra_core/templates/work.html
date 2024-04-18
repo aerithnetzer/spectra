@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ work.title }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'work.css' %}">
+</head>
+<body>
+    <h1 class="work-title">{{ work.title }}</h1>
+    <br>
+    <div class="columns">
+    <div class="left-column">
+        <h2 class="metadata-title-card">Metadata</h2>
+        <div class="abstract-card">
+            <p><strong>Abstract:</strong> {{ work.abstract }}</p>
+        </div>
+        <div class="publication-date-card">
+            <p><strong>Publication Date:</strong> {{ work.publication_date }}</p>
+        </div>
+    </div>
+    <div class="right-column">
+        <h2>Linked Resources</h2>
+        <div class="dmp-link-card">
+            <p><strong>DMP:</strong> {{ work.dmp }}</p>
+        </div>
+        <div class="article-url-card">
+            <p><strong>PDF URL:</strong> <a href="{{ work.url }}">{{ work.url }}</a></p>
+        </div>
+        <div class="code-url-card">
+            <p><strong>Code URL:</strong> <a href="{{ work.code_url }}">{{ work.code_url }}</a></p>
+        </div>
+        <div class="dataset-url-card">
+            <p><strong>Dataset URL:</strong> <a href="{{ work.dataset_url }}">{{ work.dataset_url }}</a></p>
+        </div>
+        <div
+    </div>
+    </div>
+</body>
+</html>

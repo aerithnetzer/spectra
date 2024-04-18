@@ -1,0 +1,13 @@
+<!--Combines the header and navbar html files for a single partial-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SPECTRA</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'hero.css' %}">
+    <link rel="stylesheet" href="{% static 'navbar.css' %}">
+</head>
+<div class="hero">
+    {% include 'partials/navbar.html' %}
+    {% include 'partials/header.html' %}
+</html>

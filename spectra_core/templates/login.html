@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    {% include 'partials/hero.html' %}
+    <h2>Login</h2>
+    {% if error %}
+    <p><strong>{{ error }}</strong></p>
+    {% endif %}
+    <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <input type="submit" value="Login">
+    </form>
+    <br>
+    <a href="/create_account">Create an Account</a>
+</body>
+</html>

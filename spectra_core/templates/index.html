@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SPECTRA</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <link rel="stylesheet" href="{% static 'navbar.css' %}">
+</head>
+<body>
+    <div class="hero">
+        {% include 'partials/hero.html' %}
+    </div>
+    <h2>Works</h2>
+    <ul>
+        {% for work in works %}
+            <a href="/work/{{ work.id }}"><li>{{ work.title }}</li></a>
+        {% endfor %}
+    </ul>
+    <form class="search-bar" action="/search" method="get">
+        <input type="text" name="q" placeholder="Search...">
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>
